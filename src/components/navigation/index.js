@@ -45,25 +45,25 @@ const Navigation = () => {
 						exact
 						activeClassName='btn btn-outline-success'
 						className='nav-link'
-						to='/'>
+						to='/hotels'>
 						<li className='nav-item'>Hotels</li>
 					</NavLink>
 					<NavLink
 						activeClassName='btn btn-outline-success'
 						className='nav-link'
-						to='/battle'>
+						to='/restaurants'>
 						<li className='nav-item '>Restaurants</li>
 					</NavLink>
 					<NavLink
 						activeClassName='btn btn-outline-success'
 						className='nav-link'
-						to='/popular'>
+						to='/login'>
 						<li className='nav-item'>Log in</li>
 					</NavLink>
 					<NavLink
 						activeClassName='btn btn-outline-success'
 						className='nav-link'
-						to='/popular-battle'>
+						to='/signup'>
 						<li className='nav-item'>Sign up</li>
 					</NavLink>
 				</ul>
