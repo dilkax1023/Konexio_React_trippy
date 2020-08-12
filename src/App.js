@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import HomeContainer from './containers/HomeContainer';
+import HotelsContainer from './containers/HotelsContainer';
+import HotelContainer from './containers/HotelContainer';
+import LoginContainer from './containers/LoginContainer';
+import SignupContainer from './containers/SignupContainer';
+import NotFoundContainer from './containers/NotFoundContainer';
+import Navigation from './components/navigation/index';
+import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+	return (
+		<Router>
+			<div>
+				<div className='header'>
+					<Navigation />
+					{/* <Jumbotron /> */}
+				</div>
+				<div className='container'>
+					<Switch>
+						<Route exact path='/' component={HomeContainer} />
+						<Route path='/hotels' component={HotelsContainer} />
+						<Route exact path='/hotels/:id' component={HotelContainer} />
+						<Route path='/login' component={LoginContainer} />
+						<Route path='/signup' component={SignupContainer} />
+						<Route path='/*' component={NotFoundContainer} />
+					</Switch>
+				</div>
+			</div>
+		</Router>
+	);
+};
 
 export default App;
