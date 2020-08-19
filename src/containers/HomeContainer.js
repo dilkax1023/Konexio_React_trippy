@@ -10,8 +10,10 @@ const HomeContainer = () => {
 		Api.getHome().then((data) => setCities(data));
 	}, []);
 
+	console.log(cities);
+
 	return (
-		<div className='container-fluid'>
+		<div className='container'>
 			{/* <Home cities={cities} /> */}
 			<Gallery cities={cities} />
 		</div>

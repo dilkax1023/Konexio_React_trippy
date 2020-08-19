@@ -10,7 +10,6 @@ const Container = style.div`
 
 const Gallery = ({ cities }) => {
 	const [isLarge, setIsLarge] = useState(false);
-
 	if (cities === null || cities.length === 0) return <h1>City is not found</h1>;
 	const renderCard = () => {
 		let slicedCities = cities.slice(1);
@@ -30,7 +29,7 @@ const Gallery = ({ cities }) => {
 	return (
 		<Container className='row'>
 			<div className='col-md-12'>
-				<h1>Explorez le monde</h1>
+				<h1 className='m-5 p3-5 text-bold'>Explorez le monde</h1>
 				<div className='row'>
 					<Card
 						isLarge={checkCardHandler}

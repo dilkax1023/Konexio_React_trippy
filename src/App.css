@@ -1,20 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&Material+Icons&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700&Material+Icons&display=swap');
 
 body {
 	font-family: Montserrat, sans-serif;
 	box-sizing: border-box;
+	padding-top: 10vh;
 }
 
-/* @media (min-width: 1200px) {
-	.container {
-		max-width: 1280px;
-	}
-} */
+a {
+	font-weight: 600;
+}
 
-div.header {
-	/* background-image: url('./s_logo.jpg');
-	background-size: cover;
-	background-position: top; */
-	height: 20vh;
-	/* clip-path: ellipse(100% 55% at 48% 44%); */
+h1,
+h2,
+h3 {
+	font-weight: 700;
+	color: rgb(37, 30, 30);
+}
+
+img {
+	border-radius: 0.5rem;
 }

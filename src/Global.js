@@ -1,6 +1,6 @@
 const Global = {
 	color: {
-		body: '#2a2a2a',
+		body: 'rgb(37, 30, 30)',
 		primary: '#00a64a',
 		secondary: '#767676',
 		tertiary: '#FFF',
