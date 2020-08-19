@@ -1,18 +1,13 @@
 import React from 'react';
 import Card from './Card';
-import Pagination from './Pagination';
 import Config from '../../Config';
 
-const Hotels = ({ hotels, hotelsPerPage, loading, totalHotels }) => {
-	if (loading) {
-		return <h2>Loading</h2>;
-	}
-
+const Hotels = ({ hotels }) => {
 	const hotelList = hotels.map((hotel) => {
 		return (
 			<Card
 				key={hotel._id}
-				src={`${Config.host}${hotel.pictures[1]}`}
+				src={`${Config.host}${hotel.pictures[0]}`}
 				name={hotel.name}
 				price={hotel.price}
 				stars={hotel.stars}
@@ -22,7 +17,6 @@ const Hotels = ({ hotels, hotelsPerPage, loading, totalHotels }) => {
 	return (
 		<div className='col-lg-6'>
 			<div className='row'>{hotelList}</div>
-			<Pagination totalHotels={totalHotels} hotelsPerPage={hotelsPerPage} />
 		</div>
 	);
 };

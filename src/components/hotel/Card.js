@@ -1,5 +1,4 @@
 import React from 'react';
-import Global from '../../Global.webp';
 
 const Card = ({ id, name, price, src, stars }) => {
 	const style = {
@@ -17,7 +16,7 @@ const Card = ({ id, name, price, src, stars }) => {
 	return (
 		<div className='col-md-6 p-2'>
 			<div style={cardStyle} className='card'>
-				<img style={style} src={src === null ? Global : src} alt={name} />
+				<img style={style} src={src} alt={name} />
 				<div className='card-body'>
 					<p className='card-title'>{name}</p>
 					<span>{price}$</span>
